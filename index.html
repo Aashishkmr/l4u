@@ -6,84 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Light4u</title>
 
-    <!-- Mustard UI -->
-    <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
-    <style>
-        .images {
-            width: 100%;
-            height: auto;
-            max-height: 500px;
-            display: none;
-        }
-
-        .images.active {
-            display: block;
-        }
-
-        .image-container {
-            position: relative;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #fff;
-            z-index: 9999;
-            opacity: .6;
-            display: flex;
-            justify-content: center;
-        }
-
-        .banner {
-            align-self: center;
-        }
-
-        .banner h1 {
-            font-family: "DINBlack";
-            text-align: center;
-            text-transform: uppercase;
-            color: #000000;
-        }
-
-        @media screen and (max-width: 480px){
-            .banner h1 {
-                font-size: 1.6875em;
-                line-height: 2em;
-            }  
-        }
-                 
-
-        /* Fading animation */
-        .fade {
-            -webkit-animation-name: fade;
-            -webkit-animation-duration: 2s;
-            animation-name: fade;
-            animation-duration: 2s;
-        }
-
-        @-webkit-keyframes fade {
-            from {
-                opacity: .4
-            }
-
-            to {
-                opacity: 1
-            }
-        }
-
-        @keyframes fade {
-            from {
-                opacity: .4
-            }
-
-            to {
-                opacity: 1
-            }
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style/mustardui.css">
 </head>
 
 <body>
@@ -96,8 +19,8 @@
             </div>
             <ul class="nav-links">
                 <li><a href="/index.html">Home</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
+                <li><a href="#tips">Tips</a></li>
+                <li><a href="#know-us">Know Us</a></li>
             </ul>
         </div>
     </nav>
@@ -116,10 +39,10 @@
         </section>
 
         <section class="section-tertiary">
-            <div class="container container-medium">
+            <div class="container container-medium mission-section">
                 <h1 class="h3">Our Mission</h1>
                 <p>
-                    This country belongs to women as much as to anyone else then why should she be afraid. The 
+                    This country belongs to women as much as to anyone else then why should she be afraid. The
                     mission is to use knowledge and tools to prepare every women for their own safety.
                 </p>
                 <p>We want you to feel fearless on the streets because you are prepared (and be prepared).</p>
@@ -132,35 +55,141 @@
 
                 <h2 class="h4">Read On:</h2>
 
-                <div class="row">
-                    <div class="col col-sm-6 col-lg-4">
+                <div class="row " id="info-container">
+                    <a name="tips"></a>
+                    <div class="col col-sm-12 col-lg-12">
                         <div class="card">
-                            <h2 class="card-title">Tips</h2>
-                            <p>This is an example of what a blog post would look like using various text styles, the
-                                flexbox grid, and the sidebar component.</p>
+                            <h2 class="card-title">Tips To Stay Safe</h2>
+                            <p>These simple tips will help you stay safe in undesirable instances:</p>
+                            <div class="initial-content">
+                                <ul>
+                                    <li>Keep self defence items like pepper spray, small knife always with you. Keep
+                                        this at your hands reach so that it can be quickly retrieved and used if
+                                        required.</li>
+                                    <li>Be aware about your surroundings and know your way around in your areas. Trust
+                                        your intuition.</li>
+                                    <li>Always pre-plan your late travels........</li>
+                                </ul>
+
+                            </div>
+                            <div class="additional-content">
+                                <ul>
+                                    <li>Keep self defence items like pepper spray, small knife always with you. Keep
+                                        this at your hands reach so that it can be quickly retrieved and used if
+                                        required.</li>
+                                    <li>Be aware about your surroundings and know your way around in your areas. Trust
+                                        your intuition.</li>
+                                    <li>Always pre-plan your late travels.</li>
+                                    <li>Getting into cab alone, share details with someone.</li>
+                                    <li>Make a hoax call from cab as if someone is waiting for you. Eg: "I will be
+                                        reaching soon Rohan. You guyz wait up for me. I have shared the cab details and
+                                        link as well".</li>
+                                    <li>Dont hesitate in calling 100 if you feel any kind of threat, when your vehicle
+                                        goes down or in any other situation. </li>
+                                    <li>Use only public transports like cabs, buses and autos. Dont go for private cabs
+                                        or asking for lift from strangers.</li>
+                                    <li>If you are drunk, make sure you are sober before travelling or travel with
+                                        someone.</li>
+
+                                </ul>
+                            </div>
+
+
                             <div class="card-actions">
-                                <a class="button button-primary-text" href="/examples/blog.html">View Blog Post</a>
+                                <a class="button button-primary-text read-more-btn" href='javascript:void(0)'>Read
+                                    More</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col col-sm-6 col-lg-4">
+                    <a name="pepper"></a>
+                    <div class="col col-sm-12 col-lg-12">
                         <div class="card">
-                            <h2 class="card-title">Must haves</h2>
-                            <p>This is an example of how you could use a simple table to create a shopping cart. This
-                                example uses tables, button variations, and several typography styles.</p>
+                            <h2 class="card-title">Know your pepper spray</h2>
+                            <p>Know about the most simple and basic of women safety device below:</p>
+                            <div class="initial-content">
+                                <ul>
+                                    <li>It is legal to keep pepper spray with you under section 96 and 106 of IPC</li>
+                                    <li>It is not allowed in cabin luggage at airport</li>
+                                    <li>Buy small concealable size to keep in purse or pocket ......</li>
+                                </ul>
+
+                            </div>
+                            <div class="additional-content">
+                                <ul>
+                                    <li>It is legal to keep pepper spray with you under section 96 and 106 of IPC</li>
+                                    <li>It is not allowed in cabin luggage at airport</li>
+                                    <li>Buy small concealable size to keep in purse or pocket</li>
+                                    <li>Dont misuse pepper spray. </li>
+                                    <li>Best way to use pepper spray are listed below</li>
+                                    <li>Use it from a distance atleast one arm length so that it does not hurt
+                                        you.</li>
+                                    <li>It has multiple shots so it can cover multiple threats at same/different
+                                        time.</li>
+                                    <li>Practice it so that you are familiar with it that you can use it quickly
+                                        at adverse times without even looking at nozzle(Dont actually spray but
+                                        enact).</li>
+                                    <li>While using, grip it hard through fingers and spray through thumb.</li>
+                                    <li>Keep scanning the areas and keep pepper spray armed/unlocked when you
+                                        see potential thret situations.</li>
+                                    <li>Only disarm when reach a safe place.</li>
+                                    <li>Target the eyes of attacker.</li>
+                                    <li>Dont use expired pepper spray(because cannister will loose pressure)
+                                    </li>
+                                    <li>While buying be known about spray distance, spray pattern, number of
+                                        sprays</li>
+                                    <li>Differnt spray pattern:</br>
+                                        -Stream patterns give good range but require aiming directly at the
+                                        face(best: ear to ear).</br>
+                                        -Cone mists have shorter range but you don't have to aim as well just
+                                        spray up and down around face. But if there is a breeze, a stream is
+                                        more
+                                        controllable. Mists can be blown off target or even back to the sprayer.
+                                    </li>
+                                    <li>Step on the side after spraying rather than going back because a blinder
+                                        attacker will inherently attack in front of himself</li>
+                                    <li>Keep opposite arm outsrecthed to push him if he comes on to you</li>
+                                </ul>
+                            </div>
+
                             <div class="card-actions">
-                                <a class="button button-primary-text" href="/examples/cart.html">View Shopping Cart</a>
+                                <a class="button button-primary-text read-more-btn" href='javascript:void(0)'>Read
+                                    More</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col col-sm-6 col-lg-4">
+                    <a name="know-us"></a>
+                    <div class="col col-sm-12 col-lg-12">
                         <div class="card">
                             <h2 class="card-title">Know us</h2>
-                            <p>This example uses the pricing table component along with the flexbox grid. If you shrink
-                                and grow the browser width, you'll see the packages adapt to different sizes.</p>
-                            <div class="card-actions">
-                                <a class="button button-primary-text" href="/examples/pricing.html">View Pricing</a>
-                            </div>
+                            <p>We are just few Indians who got tired of listening it on the news and we are on a
+                                mission to make this country safer for women. Light4U is a non profit organization
+                                and most of (all of) the funding we do right out of our pockets.
+                            </p>
+                            <p>Along with spreading awareness we also carry out pepper spray distribution and other 
+                                awareness activities through setting up stalls and just standing on the road with leaflets in hads.
+                                 Information on our upcoming activities will be posted on this site. Feel free to check back from time to time.
+                            </p>
+                            <p>If you would like to contribute to us or just grace us with your presence in our upcoming activities get in touch with contact details provided below. Don't spam us
+                                please, even if you do we can't do squat about it. Peace out.
+                            </p>
+                        </div>
+                    </div>
+
+                   
+                </div>
+
+                <div class="row">
+                    <div class="col col-sm-12 col-lg-4">
+                        <div class="card">
+                            <h2 class="card-title">Contact us</h2>
+                            <p>
+                                <a href="https://www.instagram.com/light4u.in/">
+                                <img class="contact-image" src="images/instagram.svg">
+                                </a>
+                                <a href="mailto:light4u.in@gmail.com">
+                                    <img class="contact-image" src="images/gmail.svg">
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -177,30 +206,21 @@
                 <div class="col col-lg-5">
                     <div class="footer-text">
                         <p class="h3">Light4u</p>
-                        <p>Example text</p>
+                        <p>Safety First Sister</p>
                     </div>
                 </div>
                 <div class="col col-sm-6 col-lg-3 col-lg-offset-1">
-                    <h4 class="footer-links-category">Links Category 1</h4>
+                    <h4 class="footer-links-category">Links </h4>
                     <ul class="footer-links">
-                        <li><a href="#">Link #1</a></li>
-                        <li><a href="#">Link #2</a></li>
-                        <li><a href="#">Link #3</a></li>
-                    </ul>
-                </div>
-
-                <div class="col col-sm-6 col-lg-3">
-                    <h4 class="footer-links-category">Links Category 2</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Link #1</a></li>
-                        <li><a href="#">Link #2</a></li>
-                        <li><a href="#">Link #3</a></li>
+                        <li><a href="#tips">Tips</a></li>
+                        <li><a href="#pepper">Pepper Spray</a></li>
+                        <li><a href="#know-us">Know Us</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <p class="copyright align-center">Made with 🌭 by Kyle Logue. Licensed under the MIT License.</p>
+        <p class="copyright align-center">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
 
     </footer>
 
@@ -208,21 +228,39 @@
     <!-- Javascript -->
 
     <script>
-var slideIndex = 0;
-showSlides();
+        /************** Sliders code  **********************/
+        var slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("images");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("images");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  
-  slides[slideIndex-1].style.display = "block";  
-  setTimeout(showSlides, 4000); // Change image every 2 seconds
-}
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 4000); // Change image every 2 seconds
+        }
+        /************** Sliders code end **********************/
+
+        var infoContainer = document.getElementById("info-container")
+        infoContainer.addEventListener('click', function (ev) {
+            ev.stopPropagation();
+            if (ev.target.innerText.toLowerCase() === "read more") {
+                ev.target.parentElement.previousElementSibling.style.display = "block";
+                ev.target.parentElement.previousElementSibling.previousElementSibling.style.display = "none";
+                ev.target.innerText = "Read Less"
+            }
+            else {
+                ev.target.parentElement.previousElementSibling.style.display = "none";
+                ev.target.parentElement.previousElementSibling.previousElementSibling.style.display = "block";
+                ev.target.innerText = "Read More"
+            }
+
+        });
+
     </script>
 </body>
 

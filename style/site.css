@@ -1,0 +1,96 @@
+.images {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    display: none;
+}
+
+.images.active {
+    display: block;
+}
+
+.image-container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 9999;
+    opacity: .6;
+    display: flex;
+    justify-content: center;
+}
+
+.banner {
+    align-self: center;
+}
+
+.banner h1 {
+    font-family: "DINBlack";
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+@media screen and (max-width: 480px) {
+    .banner h1 {
+        font-size: 1.6875em;
+        line-height: 2em;
+    }
+}
+
+.additional-content {
+    display: none;
+}
+
+#info-container, .mission-section{
+    font-weight: 400;
+}
+
+ul{
+    list-style-type: disc;
+}
+
+li{
+    padding-bottom: 8px;
+}
+
+.contact-image{
+    width: 56px;
+    height: 56px;
+    margin-left: 24px;
+}
+
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
