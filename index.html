@@ -20,15 +20,26 @@
 </head>
 
 <body>
-
+    <a name="top"></a>
+    <div class=" sidebar circle-container">
+        <a href="javascript:void(0)" onclick="toggleMenu()">
+            <img class= "sidebar mobile-menu" src="images/circle-outline.svg" id="menu-btn-open">
+            <img class= "sidebar mobile-menu hidden" src="images/close.svg" id="menu-btn-close">
+        </a>
+    </div>
+    <div class="sidebar menu-list hidden" id="floating-menu">
+        <a href="#top" onclick="toggleMenu()">Home</a>
+        <a href="#tips" onclick="toggleMenu()">Tips</a>
+        <a href="#know-us" onclick="toggleMenu()">Know Us</a>
+      </div>
     <!-- Navigation -->
-    <nav>
+    <nav class="nav-fixed">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="/">Light4u</a>
             </div>
             <ul class="nav-links">
-                <li><a href="/index.html">Home</a></li>
+                <li><a href="#top">Home</a></li>
                 <li><a href="#tips">Tips</a></li>
                 <li><a href="#know-us">Know Us</a></li>
             </ul>
@@ -36,6 +47,7 @@
     </nav>
 
     <!-- Main Content -->
+    
     <main>
         <section class="image-container section-tertiary">
             <img class="images active fade" src="images/2.jpg">
@@ -126,11 +138,13 @@
                             </div>
                             <div class="additional-content">
                                 <ul>
-                                    <li>It is legal to keep pepper spray with you under section 96 and 106 of IPC</li>
-                                    <li>It is not allowed in cabin luggage at airport</li>
+                                    <li>It is legal to keep and use pepper spray under Section 96 and 106 of IPC</li>
+                                    <li>It is not allowed in cabin luggage at airport.</li>
                                     <li>Buy small concealable size to keep in purse or pocket</li>
                                     <li>Dont misuse pepper spray. </li>
-                                    <li>Best way to use pepper spray are listed below</li>
+                                </ul>
+                                    <p>Best way to use pepper spray are listed below:</p>
+                                    <ul>
                                     <li>Use it from a distance atleast one arm length so that it does not hurt
                                         you.</li>
                                     <li>It has multiple shots so it can cover multiple threats at same/different
@@ -146,18 +160,17 @@
                                     <li>Dont use expired pepper spray(because cannister will loose pressure)
                                     </li>
                                     <li>While buying be known about spray distance, spray pattern, number of
-                                        sprays</li>
+                                        sprays.</li>
                                     <li>Differnt spray pattern:</br>
                                         -Stream patterns give good range but require aiming directly at the
                                         face(best: ear to ear).</br>
                                         -Cone mists have shorter range but you don't have to aim as well just
                                         spray up and down around face. But if there is a breeze, a stream is
-                                        more
-                                        controllable. Mists can be blown off target or even back to the sprayer.
+                                        more controllable. Mists can be blown off target or even back to the sprayer.
                                     </li>
-                                    <li>Step on the side after spraying rather than going back because a blinder
-                                        attacker will inherently attack in front of himself</li>
-                                    <li>Keep opposite arm outsrecthed to push him if he comes on to you</li>
+                                    <li>Step on the side after spraying rather than going back because a blinded
+                                        attacker will inherently attack in front of himself.</li>
+                                    <li>Keep opposite arm outsrecthed to push him if he comes on to you.</li>
                                 </ul>
                             </div>
 
@@ -175,11 +188,11 @@
                                 mission to make this country safer for women. Light4U is a non profit organization
                                 and most of (all of) the funding we do right out of our pockets.
                             </p>
-                            <p>Along with spreading awareness we also carry out pepper spray distribution and other 
-                                awareness activities through setting up stalls and just standing on the road with leaflets in hads.
+                            <p>Along with spreading awareness, we also carry out pepper spray distribution and other 
+                                awareness activities through setting up stalls and distributing leaflets.
                                  Information on our upcoming activities will be posted on this site. Feel free to check back from time to time.
                             </p>
-                            <p>If you would like to contribute to us or just grace us with your presence in our upcoming activities get in touch with contact details provided below. Don't spam us
+                            <p>If you would like to contribute to us or just grace us with your presence in our upcoming activities, get in touch with contact details provided below. Don't spam us
                                 please, even if you do we can't do squat about it. Peace out.
                             </p>
                         </div>
@@ -258,6 +271,8 @@
         var infoContainer = document.getElementById("info-container")
         infoContainer.addEventListener('click', function (ev) {
             ev.stopPropagation();
+            if (!ev.target.classList.contains('read-more-btn'))
+                return;
             if (ev.target.innerText.toLowerCase() === "read more") {
                 ev.target.parentElement.previousElementSibling.style.display = "block";
                 ev.target.parentElement.previousElementSibling.previousElementSibling.style.display = "none";
@@ -271,6 +286,19 @@
 
         });
 
+        function toggleMenu(){
+            if(document.getElementById('menu-btn-open').classList.contains('hidden'))
+            {
+                document.getElementById('menu-btn-open').classList.remove('hidden');
+                document.getElementById('menu-btn-close').classList.add('hidden');
+                document.getElementById('floating-menu').classList.add('hidden');
+            }
+            else{
+                document.getElementById('menu-btn-open').classList.add('hidden');
+                document.getElementById('menu-btn-close').classList.remove('hidden');
+                document.getElementById('floating-menu').classList.remove('hidden');
+            }
+        }
     </script>
 </body>
 

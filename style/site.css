@@ -20,7 +20,7 @@
     right: 0;
     bottom: 0;
     background-color: #fff;
-    z-index: 9999;
+    z-index: 999;
     opacity: .6;
     display: flex;
     justify-content: center;
@@ -53,7 +53,7 @@
 }
 
 ul{
-    list-style-type: disc;
+    list-style-type: none;
 }
 
 li{
@@ -65,6 +65,19 @@ li{
     height: 56px;
     margin-left: 24px;
 }
+@media screen and (min-width:700px){
+    .nav-fixed{
+        position: fixed;
+        left:0;
+        right:0;
+        z-index: 1000;
+    }
+    
+    main{
+        padding-top:75px;
+    }
+}
+
 
 
 /* Fading animation */
@@ -94,3 +107,53 @@ li{
         opacity: 1
     }
 }
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    z-index: 1001;
+    position: fixed;
+    top: 50%;
+    left: 40%;
+    display: none;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 10px;
+    text-decoration: underline;
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar{
+      display: block;
+    }
+  }
+
+  .mobile-menu{
+    left: 92.3%;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    top: 50.6%;
+    background: #fec105;
+  }
+
+  .circle-container{
+    left: 91%;
+    width: 32px;
+    height: 32px;
+    background: #fec105;
+    border-radius: 50%;
+  }
+  .menu-list{
+    top: 41%;
+    height: 22%;
+    width: 30%;
+    left: 61%;
+  }
+  .hidden{
+      display: none;
+  }
